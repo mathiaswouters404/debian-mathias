@@ -29,10 +29,11 @@ sudo ./install.sh
 - curl
 - neofetch
 - wget
+- nano
 - vim
+- neovim
 - zsh
 - tmux
-- htop
 - p7zip-full
 - p7zip-rar
 - zip
@@ -52,12 +53,15 @@ sudo ./install.sh
 ### Default Applications
 - bitwarden
 - brave
-- google chrome
+- vivaldi
 - discord
 - Microsoft Teams
 - Spotify
-- Mailspring
+- Mailspring ???
+- Geary ???
+- KMail ???
 - Flameshot
+- Logiops
 - KBackup
 - Timeshift
 - TestDisk
@@ -66,27 +70,19 @@ sudo ./install.sh
 - ...
 
 ### Programming / IT
-- brackets
-- docker desktop
-- filezilla
 - jetbrains toolbox
-- Postman
-- PuTTY
 - VS Code
-- Wireshark
-- Remmina
-- TeamViewer
-- Atom
 - Sublime Text
 - VirtualBox ???
 - VMWare ???
 - Virt-manager ????
 - Qemu
 - Looking Glass ????
-- Eclipse
-- NetBeans
+- filezilla
+- PuTTY
+- Wireshark
+- Remmina
 - OpenVPN
-- Wireguard
 - ...
 
 ### Terminal emulators
@@ -100,7 +96,6 @@ sudo ./install.sh
 - Obsidian
 - ToDoist
 - Trello
-- Simplenote
 - LibreOffice
 - ...
 
@@ -108,6 +103,7 @@ sudo ./install.sh
 - Steam
 - Wine
 - Lutris
+- Minecraft Launcher ??
 - ...
 
 ### Video - Video Editing
