@@ -11,13 +11,23 @@ AUTO MOUNT HARD DRIVES: [ChrisTitusTech - auto mount hdd](https://www.youtube.co
 
 *do NOT grab the mac/EDU download and this includes non-free firmware*
 
-### Installation Guide
+### Installation Guide CTT Test Debian:
+
+```
+git clone https://github.com/mathiaswouters/Debian-mathias.git
+cd Debian-mathias/CTT-Debian-Test
+sudo ./install-ctt.sh
+```
+
+### Installation Guide Own Debian
 
 ```
 git clone https://github.com/mathiaswouters/Debian-mathias.git
 cd Debian-mathias
 sudo ./install.sh
 ```
+
+---
 
 ## Programs
 
