@@ -34,6 +34,7 @@ sudo ./install.sh
 ### Dependencies
 - build-essential
 - git
+- kitty
 - snapd
 - net-tools
 - curl
@@ -93,13 +94,6 @@ sudo ./install.sh
 - Wireshark
 - Remmina
 - OpenVPN
-- ...
-
-### Terminal emulators
-- Tilix
-- Terminator
-- Alacritty
-- Kitty
 - ...
 
 ### Productivity
