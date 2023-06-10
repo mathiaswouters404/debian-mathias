@@ -107,7 +107,8 @@ sudo ./install.sh
 - Steam
 - Wine
 - Lutris
-- Minecraft Launcher ??
+- [Heroic Games Launcher](https://heroicgameslauncher.com/)
+- Minecraft Launcher
 - ...
 
 ### Video - Video Editing
