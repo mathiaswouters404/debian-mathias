@@ -35,88 +35,52 @@ sudo ./install.sh
 - build-essential
 - git
 - kitty
-- snapd
-- net-tools
-- curl
 - neofetch
+- unzip
+- vim
 - wget
 - nano
-- vim
-- neovim
-- zsh
-- tmux
-- p7zip-full
-- p7zip-rar
+- feh 
+- rofi 
+- picom 
+- thunar 
+- nitrogen 
+- pulseaudio 
+- pavucontrol  
+- psmisc 
+- mangohud 
+- papirus-icon-theme 
+- lightdm
+- net-tools
+- curl
 - zip
 - unzip
 - dnsutils
 - whois
 - ufw
 - gufw
-- python3
-- python3-pip
-- python3-venv
-- python3-dev
-- java JDK 17
-- docker
-- ...
 
-### Default Applications
+### Applications
 - bitwarden
 - brave
-- vivaldi
 - discord
 - Microsoft Teams
 - Spotify
-- Mailspring ???
-- Geary ???
-- KMail ???
 - Flameshot
 - Logiops
-- KBackup
 - Timeshift
-- TestDisk
-- ClamAV
-- Surfshark
-- ...
-
-### Programming / IT
-- jetbrains toolbox
 - VS Code
-- Sublime Text
-- VirtualBox ???
-- VMWare ???
-- Virt-manager ????
+- Virt-manager
 - Qemu
-- Looking Glass ????
-- filezilla
-- PuTTY
-- Wireshark
 - Remmina
-- OpenVPN
-- ...
-
-### Productivity
 - Obsidian
-- ToDoist
-- Trello
 - LibreOffice
-- ...
-
-### Gaming
 - Steam
 - Wine
 - Lutris
 - [Heroic Games Launcher](https://heroicgameslauncher.com/)
 - Minecraft Launcher
-- ...
-
-### Video - Video Editing
-- kdenlive
-- VLC media player
+- Davinci Resolve
 - OBS Studio
-- Audacity
 - Gimp
-- ...
 
-### ...
