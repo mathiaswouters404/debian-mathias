@@ -29,14 +29,26 @@
     - If you want NO desktop environment:
       1) Only select 'standard system utilities'
 
-## Step 3: Configure Debian System
+## Step 3: Add user to sudoers file
+```bash
+su root 
+nano /etc/sudoers
+```
+
+Then add the user below admin user like below syntax.
+```bash
+user_name ALL=(ALL)  ALL
+```
+
+## Step 4: Configure Debian System
 - If I use a KDE Desktop Environment:
   ```bash
   sudo apt install git -y
   git clone https://github.com/mathiaswouters404/debian-mathias
   cd debian-mathias
-  sudo chmod +x kde-install.sh
-  sudo ./kde-install.sh
+  sudo su -
+  chmod +x kde-install.sh
+  ./kde-install.sh
   ```
 
 - If I don't use a Desktop Environment:
@@ -44,6 +56,7 @@
   sudo apt install git -y
   git clone https://github.com/mathiaswouters404/debian-mathias
   cd debian-mathias
-  sudo chmod +x no-de-install.sh
-  sudo ./no-de-install.sh
+  sudo su -
+  chmod +x no-de-install.sh
+  ./no-de-install.sh
   ```
