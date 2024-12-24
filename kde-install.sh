@@ -33,10 +33,10 @@ apt upgrade -y
 
 # Moving wallpapers to Pictures
 cd $builddir
-mkdir -p /home/$username/Pictures
-mkdir -p /home/$username/Pictures/wallpapers
-cp -R wallpapers/* /home/$username/Pictures/wallpapers/
-chown -R $username:$username /home/$username
+mkdir -p $builddir/Pictures
+mkdir -p $builddir/Pictures/wallpapers
+cp -R wallpapers/* $builddir/Pictures/wallpapers/
+chown -R $username:$username $builddir
 
 # Install Snap
 apt install snapd -y
