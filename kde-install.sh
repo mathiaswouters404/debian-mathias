@@ -35,8 +35,13 @@ mkdir -p /home/$username/Pictures/wallpapers
 cp -R wallpapers/* /home/$username/Pictures/wallpapers/
 chown -R $username:$username /home/$username
 
+# Install Snap
+apt update
+apt install snapd -y
+snap install snapd
+
 # Installing packages: 
-apt install rofi unzip wget build-essential neofetch flameshot vim nano -y
+apt install rofi unzip curl wget build-essential neofetch flameshot vim nano ca-certificates gnupg -y
 
 # Install firefox:
 if dpkg -l | grep -q firefox; then
@@ -46,31 +51,59 @@ else
     sudo apt update && sudo apt install -y firefox
 fi
 
-# Install :
+# Install bitwarden:
+snap install bitwarden
+
+# Install docker (desktop):
+bash scripts/docker-install.sh
+
+# Install UFW:
 
 
-# Install :
+# Install Flameshot:
 
 
-# Install :
+# Install gedit:
 
 
-# Install :
+# Install gparted:
 
 
-# Install :
+# Install Grub Customizer:
 
 
-# Install :
+# Install Logiops:
 
 
-# Install :
+# Install spotify:
 
 
-# Install :
+# Install surfshark:
 
 
-# Install :
+# Install twingate:
+
+
+# Install VS Code:
+
+
+# Install Onlyoffice --> delete default office apps:
+
+
+# Install postman:
+
+
+# Install figma:
+
+
+# Install Remmina:
+
+
+# Install Timeshift:
+
+
+# Install Qemu - Virt manager:
+
 
 # Install chosen terminal --> also delete konsole :
 
