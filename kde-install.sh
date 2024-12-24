@@ -148,9 +148,6 @@ adduser $username kvm
 systemctl start libvirtd
 systemctl enable libvirtd
 
-# Delete konsole :
-apt uninstall konsole -y
-
 # Configure UFW:
 ufw allow ssh
 ufw allow http
@@ -174,4 +171,6 @@ cat << "EOF"
 |_______||__| \__| |_______/ 
 EOF
 
-echo "Please execute the following command to configure twingate: sudo twingate setup"
+echo "Please execute the following commands:"
+echo "sudo apt uninstall konsole -y"
+echo "sudo twingate setup"
