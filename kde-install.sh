@@ -41,7 +41,7 @@ apt install snapd -y
 snap install snapd
 
 # Installing packages: 
-apt install rofi unzip curl wget build-essential neofetch flameshot vim nano ca-certificates gnupg cmake pkg-config libevdev-dev libudev-dev libconfig++-dev libglib2.0-dev -y
+apt install rofi zip unzip dnsutils whois curl wget build-essential net-tools ufw gufw neofetch flameshot vim nano ca-certificates gnupg cmake pkg-config libevdev-dev libudev-dev libconfig++-dev libglib2.0-dev -y
 
 # Install firefox:
 if dpkg -l | grep -q firefox; then
@@ -68,15 +68,6 @@ wget -O https://desktop.docker.com/linux/main/amd64/docker-desktop-amd64.deb?utm
 apt-get update
 apt-get install -y ./docker-desktop-amd64.deb
 rm docker-desktop-amd64.deb
-
-# Install UFW:
-apt install ufw
-
-# Configure UFW:
-ufw allow ssh
-ufw allow http
-ufw allow https
-ufw enable
 
 # Install Flameshot:
 apt install flameshot
@@ -139,3 +130,13 @@ systemctl restart logid
 
 # Install chosen terminal --> also delete konsole :
 
+# Configure UFW:
+ufw allow ssh
+ufw allow http
+ufw allow https
+ufw enable
+
+# End
+echo "END"
+
+echo "Please execute the following command to configure twingate: sudo twingate setup"
