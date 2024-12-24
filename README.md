@@ -45,7 +45,7 @@ user_name ALL=(ALL)  ALL
   ```bash
   sudo apt install git -y
   git clone https://github.com/mathiaswouters404/debian-mathias
-  cd debian-mathias
+  cd /home/$USER/debian-mathias
   sudo su -
   chmod +x kde-install.sh
   chmod +x scripts/remove-bloat.sh
@@ -56,7 +56,7 @@ user_name ALL=(ALL)  ALL
   ```bash
   sudo apt install git -y
   git clone https://github.com/mathiaswouters404/debian-mathias
-  cd debian-mathias
+  cd /home/$USER/debian-mathias
   sudo su -
   chmod +x no-de-install.sh
   chmod +x scripts/remove-bloat.sh
