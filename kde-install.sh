@@ -26,7 +26,7 @@ apt install snapd -y
 snap install snapd
 
 # Installing packages: 
-apt install rofi zip unzip dnsutils whois curl wget build-essential net-tools ufw gufw neofetch flameshot vim nano ca-certificates gnupg cmake pkg-config libevdev-dev libudev-dev libconfig++-dev libglib2.0-dev -y
+apt install kitty rofi zip unzip dnsutils whois curl wget build-essential net-tools ufw gufw neofetch flameshot vim nano ca-certificates gnupg cmake pkg-config libevdev-dev libudev-dev libconfig++-dev libglib2.0-dev -y
 
 # Install firefox:
 if dpkg -l | grep -q firefox; then
@@ -132,7 +132,8 @@ adduser $username kvm
 systemctl start libvirtd
 systemctl enable libvirtd
 
-# Install Kitty --> also delete konsole :
+# Delete konsole :
+apt uninstall konsole -y
 
 # Configure UFW:
 ufw allow ssh
