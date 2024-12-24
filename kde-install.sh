@@ -105,6 +105,7 @@ systemctl enable --now logid
 cd ../../debian-mathias
 rm -rf logiops
 cp logid.cfg /etc/
+systemctl restart logid
 
 # Install spotify:
 
