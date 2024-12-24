@@ -9,21 +9,6 @@ fi
 username=$(id -u -n 1000)
 builddir=$(pwd)
 
-# Let user choose the option of the terminal
-
-echo "Please select the terminal : "
-
-browser_option=("Terminator" "...")
-select web in "${browser_option[@]}"; do
-  if [ "$web" = "Terminator" ]; then
-    web_install="Terminator"
-    break
-  elif [ "$web" = "..." ]; then
-    web_install="..."
-    break
-  fi
-done
-
 # Update packages list and update system
 apt update
 apt upgrade -y
@@ -147,7 +132,7 @@ adduser $username kvm
 systemctl start libvirtd
 systemctl enable libvirtd
 
-# Install chosen terminal --> also delete konsole :
+# Install Kitty --> also delete konsole :
 
 # Configure UFW:
 ufw allow ssh
