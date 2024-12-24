@@ -27,6 +27,10 @@ cat << "EOF"
                                                                               
 EOF
 
+# Remove bloat packages of system
+echo "Starting to remove bloat..."
+bash ./scripts/remove-bloat.sh
+
 # Update packages list and update system
 apt update
 apt upgrade -y
