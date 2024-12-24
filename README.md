@@ -44,6 +44,6 @@
   sudo apt install git
   git clone https://github.com/mathiaswouters404/debian-mathias
   cd debian-mathias
-  sudo chmod +x 
-  sudo ./
+  sudo chmod +x no-de-install.sh
+  sudo ./no-de-install.sh
   ```
