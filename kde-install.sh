@@ -9,22 +9,68 @@ fi
 username=$(id -u -n 1000)
 builddir=$(pwd)
 
+# Let user choose the option of the terminal
+
+echo "Please select the terminal : "
+
+browser_option=("Terminator" "...")
+select web in "${browser_option[@]}"; do
+  if [ "$web" = "Terminator" ]; then
+    web_install="Terminator"
+    break
+  elif [ "$web" = "..." ]; then
+    web_install="..."
+    break
+  fi
+done
 
 # Update packages list and update system
 apt update
 apt upgrade -y
 
-# Making .config and Moving config files and background to Pictures
+# Moving wallpapers to Pictures
 cd $builddir
-mkdir -p /home/$username/.config
-mkdir -p /home/$username/.fonts
 mkdir -p /home/$username/Pictures
 mkdir -p /home/$username/Pictures/wallpapers
-cp -R dotconfig/* /home/$username/.config/
 cp -R wallpapers/* /home/$username/Pictures/wallpapers/
-mv user-dirs.dirs /home/$username/.config
 chown -R $username:$username /home/$username
 
-# Installing Essential Programs 
+# Installing packages: 
+apt install rofi unzip wget build-essential neofetch flameshot vim nano -y
 
-# Installing Other less important Programs
+# Install firefox:
+if dpkg -l | grep -q firefox; then
+    echo "Firefox is already installed. Skipping installation."
+else
+    echo "Firefox is not installed. Installing..."
+    sudo apt update && sudo apt install -y firefox
+fi
+
+# Install :
+
+
+# Install :
+
+
+# Install :
+
+
+# Install :
+
+
+# Install :
+
+
+# Install :
+
+
+# Install :
+
+
+# Install :
+
+
+# Install :
+
+# Install chosen terminal --> also delete konsole :
+
