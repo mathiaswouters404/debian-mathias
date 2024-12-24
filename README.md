@@ -32,6 +32,7 @@
 ## Step 3: Configure Debian System
 - If I use a KDE Desktop Environment:
   ```bash
+  sudo apt install git
   git clone https://github.com/mathiaswouters404/debian-mathias
   cd debian-mathias
   sudo chmod +x kde-install.sh
@@ -40,6 +41,7 @@
 
 - If I don't use a Desktop Environment:
   ```bash
+  sudo apt install git
   git clone https://github.com/mathiaswouters404/debian-mathias
   cd debian-mathias
   sudo chmod +x 
