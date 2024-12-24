@@ -39,9 +39,7 @@ cp -R wallpapers/* /home/$username/Pictures/wallpapers/
 chown -R $username:$username /home/$username
 
 # Install Snap
-apt update
 apt install snapd -y
-snap install snapd
 
 # Installing packages: 
 apt install kitty rofi zip unzip dnsutils whois curl wget build-essential net-tools ufw gufw neofetch flameshot vim nano ca-certificates gnupg cmake pkg-config libevdev-dev libudev-dev libconfig++-dev libglib2.0-dev -y
@@ -51,7 +49,7 @@ if dpkg -l | grep -q firefox; then
     echo "Firefox is already installed. Skipping installation."
 else
     echo "Firefox is not installed. Installing..."
-    sudo apt update && sudo apt install -y firefox
+    apt install -y firefox
 fi
 
 # Install bitwarden:
@@ -67,7 +65,7 @@ usermod -aG docker $username
 newgrp docker
 
 # Install docker desktop:
-wget -O https://desktop.docker.com/linux/main/amd64/docker-desktop-amd64.deb?utm_source=docker&utm_medium=webreferral&utm_campaign=docs-driven-download-linux-amd64
+wget -O docker-desktop-amd64.deb https://desktop.docker.com/linux/main/amd64/docker-desktop-amd64.deb
 apt-get update
 apt-get install -y ./docker-desktop-amd64.deb
 rm docker-desktop-amd64.deb
