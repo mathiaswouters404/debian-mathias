@@ -41,24 +41,12 @@ user_name ALL=(ALL)  ALL
 ```
 
 ## Step 4: Configure Debian System
-- If I use a KDE Desktop Environment:
   ```bash
   sudo apt install git -y
   git clone https://github.com/mathiaswouters404/debian-mathias
   cd /home/$USER/debian-mathias
   sudo su -
-  chmod +x kde-install.sh
+  chmod +x install.sh
   chmod +x scripts/remove-bloat.sh
-  ./kde-install.sh
-  ```
-
-- If I don't use a Desktop Environment:
-  ```bash
-  sudo apt install git -y
-  git clone https://github.com/mathiaswouters404/debian-mathias
-  cd /home/$USER/debian-mathias
-  sudo su -
-  chmod +x no-de-install.sh
-  chmod +x scripts/remove-bloat.sh
-  ./no-de-install.sh
+  ./install.sh
   ```
