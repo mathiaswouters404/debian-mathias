@@ -59,5 +59,6 @@ user_name ALL=(ALL)  ALL
   cd debian-mathias
   sudo su -
   chmod +x no-de-install.sh
+  chmod +x scripts/remove-bloat.sh
   ./no-de-install.sh
   ```
