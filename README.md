@@ -1,5 +1,19 @@
 # Debian-mathias
 
+## Step 1: Download Debian ISO
+
+1) Go to [Debian Website](https://www.debian.org/)
+
+## Step 2:
+
+## Step 3:
+
+## Step 4:
+
+## Step 5:
+
+
+
 
 ## Programs
 
