@@ -48,6 +48,7 @@ user_name ALL=(ALL)  ALL
   cd debian-mathias
   sudo su -
   chmod +x kde-install.sh
+  chmod +x scripts/remove-bloat.sh
   ./kde-install.sh
   ```
 
