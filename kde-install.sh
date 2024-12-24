@@ -41,7 +41,7 @@ apt install snapd -y
 snap install snapd
 
 # Installing packages: 
-apt install rofi unzip curl wget build-essential neofetch flameshot vim nano ca-certificates gnupg -y
+apt install rofi unzip curl wget build-essential neofetch flameshot vim nano ca-certificates gnupg cmake pkg-config libevdev-dev libudev-dev libconfig++-dev libglib2.0-dev -y
 
 # Install firefox:
 if dpkg -l | grep -q firefox; then
@@ -54,26 +54,57 @@ fi
 # Install bitwarden:
 snap install bitwarden
 
-# Install docker (desktop):
-bash scripts/docker-install.sh
+# Install docker:
+wget -O docker.sh https://get.docker.com/
+bash docker.sh
+rm docker.sh
+
+# Add user to docker group:
+usermod -aG docker "$USER"
+newgrp docker
+
+# Install docker desktop:
+wget -O https://desktop.docker.com/linux/main/amd64/docker-desktop-amd64.deb?utm_source=docker&utm_medium=webreferral&utm_campaign=docs-driven-download-linux-amd64
+apt-get update
+apt-get install -y ./docker-desktop-amd64.deb
+rm docker-desktop-amd64.deb
 
 # Install UFW:
+apt install ufw
 
+# Configure UFW:
+ufw allow ssh
+ufw allow http
+ufw allow https
+ufw enable
 
 # Install Flameshot:
-
+apt install flameshot
 
 # Install gedit:
-
+snap install gedit
 
 # Install gparted:
-
+apt install gparted
 
 # Install Grub Customizer:
-
+add-apt-repository ppa:trebelnik-stefina/grub-customizer
+apt update
+apt install grub-customizer
 
 # Install Logiops:
-
+git clone https://github.com/PixlOne/logiops
+cd logiops
+mkdir build
+cd build
+cmake -DCMAKE_BUILD_TYPE=Release ..
+make
+make install
+touch /etc/logid.cfg
+systemctl enable --now logid
+cd ../../debian-mathias
+rm -rf logiops
+cp logid.cfg /etc/
 
 # Install spotify:
 
