@@ -60,7 +60,7 @@ bash docker.sh
 rm docker.sh
 
 # Add user to docker group:
-usermod -aG docker "$USER"
+usermod -aG docker $username
 newgrp docker
 
 # Install docker desktop:
@@ -70,18 +70,18 @@ apt-get install -y ./docker-desktop-amd64.deb
 rm docker-desktop-amd64.deb
 
 # Install Flameshot:
-apt install flameshot
+apt install flameshot -y
 
 # Install gedit:
 snap install gedit
 
 # Install gparted:
-apt install gparted
+apt install gparted -y
 
 # Install Grub Customizer:
 add-apt-repository ppa:trebelnik-stefina/grub-customizer
 apt update
-apt install grub-customizer
+apt install grub-customizer -y
 
 # Install Logiops:
 git clone https://github.com/PixlOne/logiops
@@ -99,34 +99,53 @@ cp logid.cfg /etc/
 systemctl restart logid
 
 # Install spotify:
-
+curl -sS https://download.spotify.com/debian/pubkey_6224F9941A8AA6D1.gpg | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg
+echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+apt update
+apt install spotify-client -y
 
 # Install surfshark:
-
+curl -f https://downloads.surfshark.com/linux/debian-install.sh --output surfshark-install.sh
+sh surfshark-install.sh
+apt-get update
+apt-get --only-upgrade install surfshark -y
 
 # Install twingate:
-
+curl -s https://binaries.twingate.com/client/linux/install.sh | sudo bash
 
 # Install VS Code:
+curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+install -o root -g root -m 644 microsoft.gpg /etc/apt/keyrings/microsoft-archive-keyring.gpg
+sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/microsoft-archive-keyring.gpg] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+apt update
+apt-get install code -y
 
+# Install Onlyoffice:
+snap install onlyoffice-desktopeditors
 
-# Install Onlyoffice --> delete default office apps:
-
+# Delete LibreOffice:
+apt-get remove --purge "libreoffice*"
+apt-get clean
+apt-get autoremove
 
 # Install postman:
-
+snap install postman
 
 # Install figma:
-
+snap install figma-linux
 
 # Install Remmina:
-
+snap install remmina
 
 # Install Timeshift:
-
+apt install timeshift -y
 
 # Install Qemu - Virt manager:
-
+apt install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager -y
+adduser $username libvirt
+adduser $username kvm
+systemctl start libvirtd
+systemctl enable libvirtd
 
 # Install chosen terminal --> also delete konsole :
 
