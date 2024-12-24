@@ -34,6 +34,7 @@
   ```bash
   git clone https://github.com/mathiaswouters404/debian-mathias
   cd debian-mathias
+  sudo chmod +x kde-install.sh
   sudo ./kde-install.sh
   ```
 
@@ -41,6 +42,7 @@
   ```bash
   git clone https://github.com/mathiaswouters404/debian-mathias
   cd debian-mathias
+  sudo chmod +x 
   sudo ./
   ```
 
