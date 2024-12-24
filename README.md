@@ -36,6 +36,7 @@
   cd debian-mathias
   sudo ./kde-install.sh
   ```
+
 - If I don't use a Desktop Environment:
   ```bash
   git clone https://github.com/mathiaswouters404/debian-mathias
