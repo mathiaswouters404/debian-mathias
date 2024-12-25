@@ -6,13 +6,11 @@ packages=(
     ark
     "contact-theme-editor"
     "contact-print-theme-editor"
-    "crashed-processes-viewer"
+    drkonqi
     dragonplayer
-    "emoji-selector"
     "firefox-esr"
     "gimp"
     gwenview
-    help
     imagemagick
     juk
     "kaddressbook"
@@ -20,10 +18,13 @@ packages=(
     kcalc
     "kdeconnect"
     "kdeconnect-sms"
+    kde-spectacle
     kfind
+    khelpcenter
     kmag
     kmail
     "kmail-header-theme-editor"
+    kmenuedit
     kmousetool
     kmouth
     knotes
@@ -33,12 +34,10 @@ packages=(
     ktnef
     kwalletmanager
     kwrite
-    "menu-editor"
     okular
     "open-on-connected-device-via-kdeconnect"
     "pim-data-exporter"
     "sieve-editor"
-    spectacle
     sweeper
     uxterm
     xterm
