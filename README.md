@@ -44,8 +44,8 @@ user_name ALL=(ALL)  ALL
   ```bash
   sudo apt install git -y
   git clone https://github.com/mathiaswouters404/debian-mathias
-  cd /home/$USER/debian-mathias
   sudo su -
+  cd /home/$(id -u -n 1000)/debian-mathias
   chmod +x install.sh
   chmod +x scripts/remove-bloat.sh
   ./install.sh
